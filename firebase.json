@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "crud-projeto-angular",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

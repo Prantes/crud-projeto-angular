@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "crud-usuarios-angular-4f17c": {
+      "hosting": {
+        "crud-projeto-angular": [
+          "crud-usuarios-angular-4f17c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "crud-usuarios-angular-4f17c"
+  }
+}
