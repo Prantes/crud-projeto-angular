@@ -41,6 +41,7 @@ ngAfterViewInit() {
 }
 
 
+//Função dos usuários
 getListUsers(){
   this.userService.getAllUsers().subscribe({
     next:(response:any) =>{
@@ -59,7 +60,16 @@ getListUsers(){
   });
 }
 
+deleteUser(firebaseId: string) {
+    this.userService.deleteUser(firebaseId).then(
+      (response:any)=>{
+        window.alert ('Usuario excluido com sucesso')
+      }
+    );
 
+}
+
+// FIM DAS FUNÇÕES DOS USUARIOS
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -82,8 +92,15 @@ openModalViewUser(user: User){
 openModalAddUser(){
   this.dialog. open(ModalFormUserComponent,{
     width:'700px',
-    height:'400px',
+    height:'410px',
   }).afterClosed().subscribe(()=> this.getListUsers);
 }
 
+openModalEditUser(user: User){
+  this.dialog. open(ModalFormUserComponent,{
+    width:'700px',
+    height:'410px',
+    data:user
+  }).afterClosed().subscribe(()=> this.getListUsers);
+}
 }

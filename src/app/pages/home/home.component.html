@@ -18,7 +18,15 @@
             <app-button textButton="Iniciar" routerLink="/crud"></app-button>
           </div>
           <div class="col-12 col-md-4">
-            <img src="../../../assets/Visual data-amico.png" width="100%">
+            @defer{
+              <img src="../../../assets/Visual data-amico.png" width="100%">
+
+            }@placeholder(minimum 500ms) {
+                <mat-spinner class="float-end" width="100%"></mat-spinner>
+            }@error {
+              falha ao carregar imagem
+            }
+
           </div>
         </div>
       </div>

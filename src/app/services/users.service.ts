@@ -17,15 +17,15 @@ export class UsersService {
     return this.dataBaseStore.collection('users', user => user. orderBy('name')).valueChanges({idField:'firebaseId'}) as Observable<any[]>
   }
 
-  addUser(user:User){
+  addUser(user: User){
     return this.dataBaseStore.collection('users').add(user);
   }
 
-  update(userId:string, user: User){
-    return this.dataBaseStore.collection('user').doc(userId).update(user);
+  update(userId: string, user: User){
+    return this.dataBaseStore.collection('users').doc(userId).update(user);
   }
 
-  deletUser(){
-    return this.dataBaseStore.collection('users').doc('userId').delete();
+  deleteUser(userId: string) {
+    return this.dataBaseStore.collection('users').doc(userId).delete();
   }
 }
