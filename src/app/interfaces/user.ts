@@ -4,7 +4,7 @@ export interface User {
   sector:string,
   role:string,
   firebaseId?:string,
-  helthPlan?:string,
+  healthPlan?:string,
   dentalPlan?:string,
 }
 // o simbulo de "?" significa que é opicional
