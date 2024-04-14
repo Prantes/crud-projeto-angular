@@ -10,7 +10,6 @@ const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'home', component: HomeComponent},
   {path:'crud', component: CrudComponent},
-  {path:'index', component: LoginComponent},
 
 ];
 
